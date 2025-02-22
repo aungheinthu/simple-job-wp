@@ -1,0 +1,474 @@
+/* Setting Tabs */
+
+.sjw_setting_tabs {
+    width: 100%;
+}
+
+.sjw_setting_tab-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0px;
+}
+
+.sjw_setting_tab-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    margin-bottom: -1px;
+}
+
+.sjw_setting_tab-item:hover {
+    background-color: #e0e0e0;
+}
+
+.sjw_setting_tab-content {
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.sjw_setting_sub-tab-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.sjw_setting_sub-tab-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+}
+
+.sjw_setting_sub-tab-item:hover {
+    background-color: #e0e0e0;
+}
+
+.sjw_setting_tab-panel {
+    display: none;
+}
+
+.sjw_setting_sub-tab-content {
+    margin-top: 20px;
+}
+
+.sjw_setting_sub-tab-panel {
+    display: none;
+}
+
+.sjw_setting_tab-item.active {
+    background-color: #ddd;
+}
+
+.sjw_setting_sub-tab-item.active {
+    background-color: #ddd;
+}
+
+.sjw_setting_tab-panel.active {
+    display: block;
+}
+
+.sjw_setting_sub-tab-panel.active {
+    display: block;
+}
+
+/* Setting Tabs */
+
+.sjw-submit-button-wrap{
+    display: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sjw-submit-button-wrap .spinner{
+    margin: 0px;
+}
+
+.sjw-submit-button-wrap .spinner.is_active{
+    visibility: visible;
+}
+
+/* Dynamic Field Styling */
+.dynamic-field {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: #f9f9f9;
+    position: relative;
+    display: grid;
+    gap: 15px;
+}
+
+.dynamic-field:hover {
+    background: #f1f1f1;
+}
+
+.dynamic-field .drag-handle {
+    cursor: move;
+    font-size: 22px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Input and Select Styling */
+.dynamic-field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.dynamic-field input[type="text"],
+.dynamic-field select {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+.dynamic-field input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Remove Field Button */
+.dynamic-field .button-link-delete {
+    color: #d63638;
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0px;
+    margin-top: 15px;
+}
+
+.dynamic-field .button-link-delete:hover {
+    text-decoration: underline;
+}
+
+/* Conditional Fields */
+.dynamic-field .condition-fields {
+    padding: 10px;
+    border-left: 3px solid #007cba;
+    background: #eef6fc;
+    margin-bottom: 10px;
+}
+
+.dynamic-field .condition-fields label {
+    margin-top: 10px;
+}
+
+.dynamic-field .condition-fields select,
+.dynamic-field .condition-fields input[type="text"] {
+    margin-top: 5px;
+}
+
+/* Options Label and Input */
+.dynamic-field .options-label {
+    font-weight: bold;
+}
+
+/* Sorting Indicator */
+.dynamic-field .sortable {
+    cursor: move;
+}
+
+/* Grid Layout for Condition Fields */
+.dynamic-field .condition-fields .condition-fields-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+/* Flex Layout for Part 1 */
+.dynamic-field .part-1 {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.sjw-add-field-button{
+    margin-bottom: 20px !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .dynamic-field .condition-fields .condition-fields-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .dynamic-field .part-1 {
+        flex-direction: column;
+    }
+}
+
+/* General form styling */
+#sjw_export_fields_form {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Styling for the Available Fields and Selected Fields container */
+#sjw_export_fields_form #available_fields, 
+#sjw_export_fields_form #selected_fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    border: 1px dashed #ccc;
+    min-height: 200px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#sjw_export_fields_form #available_fields {
+    border: 1px solid #ddd;
+}
+
+#sjw_export_fields_form #selected_fields {
+    border: 1px solid #ddd;
+    background-color: #e6ffe6;
+}
+
+/* Container for the fields */
+#sjw_export_fields_form .field-container {
+    display: flex;
+    gap: 20px;
+}
+
+/* Columns for available and selected fields */
+#sjw_export_fields_form .field-column {
+    width: 45%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Header styling for sections */
+#sjw_export_fields_form .field-column h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Sortable list container */
+#sjw_export_fields_form .sortable {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Styling for each sortable item */
+#sjw_export_fields_form .sortable-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 4px;
+    position: relative;
+}
+
+/* Delete icon styling */
+#sjw_export_fields_form .delete-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Input field styling for each item */
+#sjw_export_fields_form .child-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#sjw_export_fields_form .child-wrap input[type="text"],
+#sjw_export_fields_form .child-wrap input[type="text"]:focus {
+    border: none;
+    background-color: transparent;
+    flex-grow: 1;
+    padding: 5px;
+    outline: none;
+    box-shadow: none;
+    min-width: 300px;
+    pointer-events: none;
+    line-height: inherit;
+}
+
+#sjw_export_fields_form #selected-fields{
+    min-height: 80%;
+}
+
+#sjw_export_fields_form #selected-fields .sortable-item{
+    max-width: 100% !important;
+    width: inherit !important;
+}
+
+#sjw_export_fields_form #selected-fields .dashicons.dashicons-trash{
+    color: #d63638;
+}
+
+#sjw_export_fields_form #selected-fields input[type="text"]{
+    pointer-events: all;
+    border: 1px solid #8c8f94;
+}
+
+/* Styling for drag handle */
+#sjw_export_fields_form .drag-handle {
+    cursor: move;
+}
+
+/* Placeholder for when dragging an item */
+#sjw_export_fields_form .sortable-placeholder {
+    border: 2px dashed #bbb;
+    min-height: 40px;
+    background-color: #fafafa;
+    margin: 5px 0;
+    display: inline-block;
+}
+
+/* Input styling for Available and Selected Fields */
+#sjw_export_fields_form #available_fields input,
+#sjw_export_fields_form #available_fields input:focus {
+    background: transparent;
+    border-color: transparent;
+    pointer-events: none;
+    min-width: 300px;
+}
+
+#sjw_export_fields_form #selected_fields input {
+    min-width: 300px;
+}
+
+#sjw_export_fields_form #available-fields .dashicons.dashicons-trash{
+    display: none;
+}
+
+/* Title styling for the fields section */
+#sjw_export_fields_form #application-export-fields-content h2 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Setting */
+
+.email-template-section {
+    margin-bottom: 20px;
+}
+
+.email-template-section label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.email-template-section > textarea,
+.email-template-section > input {
+    width: 100%;
+}
+
+.description {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.shortcode-list-wrap{
+    display: flex;
+    flex-flow: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.shortcode-list-wrap .shortcode-list span{
+    display: inline-block;
+    padding: 8px 10px;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.sjw-status{
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 5px;
+	max-width: 110px;
+}
+
+.sjw-status[data-status="new"] {
+    background-color: #FFA500; /* Orange */
+    color: #fff;
+}
+
+.sjw-status[data-status="screening"] {
+    background-color: #1E90FF; /* Dodger Blue */
+    color: #fff;
+}
+
+.sjw-status[data-status="not-suitable"] {
+    background-color: #7B68EE; /* Medium Slate Blue */
+    color: #fff;
+}
+
+.sjw-status[data-status="shortlist"] {
+    background-color: #FFD700; /* Gold */
+    color: #fff;
+}
+
+.sjw-status[data-status="hire"] {
+    background-color: #2E8B57; /* Sea Green */
+    color: #fff;
+}
+
+.sjw-status[data-status="reject"] {
+    background-color: #8B0000; /* Dark Red */
+    color: #fff;
+}
+
+.sjw-status[data-status="kiv"] {
+    background-color: #BA55D3; /* Medium Orchid */
+    color: #fff;
+}
+
+/* .sjw-status[data-status="not_any"] {
+    background-color: #B0B0B0;
+    color: #fff;
+}
+
+.sjw-status[data-status="new"] {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.sjw-status[data-status="in-process"] {
+    background-color: #FFC107;
+    color: #000;
+}
+
+.sjw-status[data-status="shortlist"] {
+    background-color: #17A2B8;
+    color: #fff;
+}
+
+.sjw-status[data-status="reject"] {
+    background-color: #DC3545;
+    color: #fff;
+}
+
+.sjw-status[data-status="selected"] {
+    background-color: #28A745;
+    color: #fff;
+} */

@@ -1,0 +1,232 @@
+:root{
+    --white: #ffffff;
+    --black: #000000;
+}
+
+.iti{
+    display: block !important;
+}
+
+.iti--inline-dropdown .iti__dropdown-content{
+	max-width: 420px;
+}
+
+.uk-card .uk-card-header{
+    color: var(--title-color);
+}
+
+.uk-card .uk-card-title a{
+    color: var(--title-color);
+    text-decoration: none;
+}
+
+.uk-card .uk-card-body{
+    color: var(--text-color);
+}
+
+.sjw-job-card-title{
+    color: var(--title-color);
+    margin: 0px;
+}
+
+.sjw-job-description{
+    color: var(--text-color);
+}
+
+.sjw-job-description ul,
+.sjw-job-description ol{
+    margin-bottom: 20px !important;
+    margin-left: 15px;
+}
+
+.sjw-form label.uk-form-label{
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.sjw-form input[type="text"], 
+.sjw-form input[type="email"], 
+.sjw-form input[type="tel"], 
+.sjw-form select.uk-select, 
+.sjw-form textarea{
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    background-color: #f8f8f8;
+	font-weight: normal;
+}
+
+.sjw-form .uk-form-controls label {
+    font-weight: normal;
+}
+
+.sjw-form input[type="checkbox"]:not(:checked) {
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    background-color: #f8f8f8;
+}
+
+.sjw-form button.iti__selected-country{
+    border-radius: 0px;
+    border: 0px;
+    background-color: #e5e5e5;
+}
+
+.sjw-form button.iti__selected-country .iti__selected-country-primary,
+.sjw-form button.iti__selected-country .iti__selected-country-primary:hover{
+    background-color: #e5e5e5 !important;
+}
+
+#sjw-job-filter .uk-select,
+#sjw-job-filter .uk-input,
+.sjw-form .uk-select,
+.sjw-form .uk-input {
+    border-radius: 3px;
+    border: 1px solid #e5e5e5;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+	min-height: 48px;
+}
+
+.sjw-form .uk-form-label{
+    margin-bottom: 10px;
+}
+
+.uk-button.uk-button-primary{
+    background-color: var(--theme-color);
+    color: var(--white);
+    border-radius: 3px;
+    font-size: 14px;
+    padding: inherit;
+    border: 0px;
+    padding: 0px 30px;
+	min-height: 48px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	width: 100%;
+	max-width: 180px;
+}
+
+.uk-button.uk-button-primary.uk-width-1-1{
+	max-width: 100%;
+}
+
+.uk-button.uk-button-primary:hover{
+    background-color: var(--theme-color);
+    color: var(--white);
+}
+
+button i.fa-spinner{
+	display: none;
+	margin-right: 8px;
+}
+
+button.sjw-buttonload i.fa-spinner{
+	display: block;
+}
+
+.sjw-thank-you-message{
+	background: var(--theme-color);
+}
+
+#sjw-job-filter-container{
+    position: relative;
+}
+
+.sjw-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Ensure it's above other content */
+}
+
+.sjw-loader .spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3); /* Light border */
+    border-top: 4px solid var(--theme-color); /* Bright white spinner */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+#sjw-pagination ul.uk-pagination{
+    gap: 5px;
+}
+
+#sjw-pagination ul.uk-pagination li > a,
+#sjw-pagination ul.uk-pagination li > span{
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--theme-color);
+    border-radius: 3px;
+    color: var(--white);
+    opacity: 0.8;
+}
+
+#sjw-pagination ul.uk-pagination li.uk-active > span,
+#sjw-pagination ul.uk-pagination li > a:hover{
+    opacity: 1;
+}
+
+.sjw-up-to-date{
+	font-size: 18px;
+	color: var(--theme-color);
+}
+
+/* #sjw-job-filter-banner{
+    overflow: hidden;
+}
+
+#sjw-job-filter-banner .uk-background-cover{
+    margin-left: -50%;
+    margin-right: -50%;
+} */
+.post-type-archive-sjw_jobs .ast-container,
+.single-sjw_jobs .ast-container{
+    max-width: 100% !important;
+    padding: 0px !important;
+}
+
+#sjw-job-filter-banner h1{
+    color: var(--white);
+}
+
+/* Spinner Animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive font size for larger screens */
+@media (min-width: 1024px) {
+    .sjw-job-title {
+        font-size: 3rem; /* Slightly larger for desktops */
+    }
+}
+
+/* Responsive font size for medium screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .sjw-job-title {
+        font-size: 2.5rem; /* Default size for tablets */
+    }
+}
+
+/* Responsive font size for small screens */
+@media (max-width: 767px) {
+    .sjw-job-title {
+        font-size: 2rem; /* Smaller size for mobile devices */
+    }
+}
